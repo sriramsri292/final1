@@ -17,7 +17,9 @@ export default function Explore() {
       <Nav justify variant="tabs" defaultActiveKey="/home" className="Eh" >
       <Nav.Item>
         
-         <Link to="/news"><h4>"What's Happening Worldwide?"</h4>  </Link>
+        <Link onClick={() => alert("Under Maintenance")}>
+  <h4>"What's Happening Worldwide?"</h4>
+</Link>
       </Nav.Item>
       <Nav.Item>
       <Link to ="/rain"><h4> Does It Rain !</h4></Link>
