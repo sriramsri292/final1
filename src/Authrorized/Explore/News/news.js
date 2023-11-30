@@ -17,10 +17,7 @@ export default function News(){
     const [newsData, setNewsData] = useState([]); // Initialize newsData state as an empty array
 
     useEffect(() => {
-      const url =
-        "https://newsapi.org/v2/top-headlines?" +
-        "country=in&" +
-        "apiKey=e7c31c435fc945ee9943008a24b6fb2b";
+      const url ="https://news1-8njt.onrender.com/news/api/news";
   
       fetch(url)
         .then((response) => response.json())

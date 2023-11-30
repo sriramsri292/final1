@@ -83,8 +83,7 @@ export default function Message() {
     }
   };
 
-  
-
+ 
   const foundReciever = users.find(users => users.userName === chat.userName);
 
   async function getChatIds() 
@@ -102,6 +101,7 @@ export default function Message() {
         sendChatIdsToBackend(chatIds);
       } else {
         console.log('No chatIds found for the user.');
+        alert("No history of chats found for the user.")
       }
     } else {
       console.log('User not found');
@@ -184,6 +184,8 @@ export default function Message() {
 
   const start = async () => {
     if (!selectedUserName || !Array.isArray(conversations.conversations)) {
+   
+      alert("you have no history of chat so we are giving you random chats ")
       return; // Do nothing if no user is selected or conversations is not an array
     }
   

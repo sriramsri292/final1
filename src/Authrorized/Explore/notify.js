@@ -55,25 +55,30 @@ export default function Notify (){
                 <img className="NNi" src="https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?t=st=1699979064~exp=1699982664~hmac=6c88cdc0952a4708df001d3fada4e696ceae00624b644c57cf98b465d43e017b&w=996" alt="img"/>
             </div>
             
-            <div className="NNc"> 
-            
-            {notify.map((notification, index) => (
-      <Card key={index} border="success" className="NNNc">
-        <Card.Header><h1> Notification</h1></Card.Header>
-        <Card.Body>
-          <Card.Title><h5>{notification.type} Request </h5> </Card.Title>
-          <Card.Text>
-           <h7>{notification.message} </h7> 
-            <br />
-            {/* Additional information */}
-            <small>Timing: {notification.createdAt}</small>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    ))}
-      
-            </div>
-            
+            <div className="NNc">
+        {notify.length === 0 ? (
+          <Card border="success" className="NNNc">
+            <Card.Header>
+              <h1>No Notifications</h1>
+            </Card.Header>
+          </Card>
+        ) : (
+          notify.map((notification, index) => (
+            <Card key={index} border="success" className="NNNc">
+              <Card.Header><h1> Notification</h1></Card.Header>
+              <Card.Body>
+                <Card.Title><h5>{notification.type} Request </h5> </Card.Title>
+                <Card.Text>
+                  <h7>{notification.message} </h7>
+                  <br />
+                  {/* Additional information */}
+                  <small>Timing: {notification.createdAt}</small>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          ))
+        )}
+      </div>
         </div>
     )
 }

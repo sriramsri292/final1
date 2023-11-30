@@ -17,9 +17,7 @@ export default function Sports(){
     
     useEffect(() => {
       const url =
-        "https://newsapi.org/v2/top-headlines?" +
-        "country=in&category=sports&" +
-        "apiKey=e7c31c435fc945ee9943008a24b6fb2b";
+        "https://news1-8njt.onrender.com/news/api/sports";
   
       fetch(url)
         .then((response) => response.json())
