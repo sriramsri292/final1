@@ -17,7 +17,7 @@ export default function Business(){
 
     useEffect(() => {
       const url =
-        "https://news1-8njt.onrender.com/news/api/business";
+        "https://news2-iaib.onrender.com/news/api/business";
   
       fetch(url)
         .then((response) => response.json())

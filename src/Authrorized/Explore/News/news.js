@@ -17,7 +17,7 @@ export default function News(){
     const [newsData, setNewsData] = useState([]); // Initialize newsData state as an empty array
 
     useEffect(() => {
-      const url ="https://news1-8njt.onrender.com/news/api/news";
+      const url ="https://news2-iaib.onrender.com/news/api/news";
   
       fetch(url)
         .then((response) => response.json())

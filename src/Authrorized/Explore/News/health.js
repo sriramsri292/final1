@@ -16,7 +16,7 @@ export default function Health(){
 
     useEffect(() => {
       const url =
-        "https://news1-8njt.onrender.com/news/api/health";
+        "https://news2-iaib.onrender.com/news/api/health";
   
       fetch(url)
         .then((response) => response.json())

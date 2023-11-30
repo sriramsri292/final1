@@ -17,7 +17,7 @@ export default function Sports(){
     
     useEffect(() => {
       const url =
-        "https://news1-8njt.onrender.com/news/api/sports";
+        "https://news2-iaib.onrender.com/news/api/sports";
   
       fetch(url)
         .then((response) => response.json())
